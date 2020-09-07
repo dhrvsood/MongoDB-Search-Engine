@@ -39,20 +39,15 @@
                             }));
 
                         $("#search-bar").on("keypress", function (e) {
-                            if (data != null) {
-                                console.log("not empty");
-                            }
                             if (e.which === 13) { // enter key
                                 $('#description').empty();
-                                console.log(data);
                                 
                                 $('#description').append('<p>' + data.length + ' results found.</p>' );
                                 for (i = 0; i < data.length; i++) {
-                                    console.log(data[i]);
                                     text += '<p>' + data[i].bookType + ' - ' + data[i].instrument + ', ' + data[i].recordDate + '</p>';
                                     text += '<p><b>Grantor: </b>' + data[i].grantor + '</p>';
                                     text += '<p>' + data[i].label + '</p>';
-                                    text += '<a href="' + data[i].filename + '">Download Document</a>';
+                                    text += '<a href="' + data[i].filename + '">' + data[i].filename + '</a>';
                                     text += '<hr>';
                                     $('#description').append(text);
                                     text = "";
@@ -69,7 +64,7 @@
                         text += '<p>' + ui.item.bookType + ' - ' + ui.item.instrument + ', ' + ui.item.recordDate + '</p>';
                         text += '<p><b>Grantor: </b>' + ui.item.grantor + '</p>';
                         text += '<p>' + ui.item.label + '</p>';
-                        text += '<a href="' + ui.item.filename + '">Download Document</a>';
+                        text += '<a href="' + ui.item.filename + '">' + ui.item.filename + '</a>';
                         text += '<hr>';
                         $('#description').append(text);
                         text = "";
