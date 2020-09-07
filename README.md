@@ -11,7 +11,7 @@ node main.js
 ```
 
 **frontend**
-```
+```bash
 cd frontend
 http-server -p 5000
 ```
@@ -27,7 +27,8 @@ Current functionality:
 
 Planned functionality:
 - [ ] Autocomplete based on different data columns
-- [ ] Tokenise using entire string instead of for more accuracy
+- [ ] Tokenise using entire string instead of delimeters for more accuracy
+- [ ] Implement button in input bar
 
 ## Technologies & Frameworks
 The back-end of this project was written in Node.js with Express being used for server functionality. The front-end was built using HTML and jQuery.
